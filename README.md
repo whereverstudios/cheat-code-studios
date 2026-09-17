@@ -4,7 +4,9 @@ Single static page. `page.html` is the source (title/meta/style at the top, then
 `node build.mjs` wraps it into a deployable `index.html`. Preview with `node serve.mjs 4324`.
 
 It opens in the room (`media/room.jpg`, the 16:9 den render): press Start on the SNES pad (click, Enter or Space),
-the CRT powers on, the camera flies into the glass, static, and the site fades in. Atmosphere layers (lava lamp,
+the CRT powers on, the wordmark appears on the glass, light streaks pull the camera into the screen until the
+glass wordmark sits exactly on the site's hero wordmark (a match cut, computed from both elements' rects at
+run time), a phosphor bloom covers the cut, and the room dissolves. Atmosphere layers (lava lamp,
 window light, TV standby glow, LED, dust, mouse parallax) are positioned as percentages of the image, so if the
 image changes, update `SCREEN` and the `.fx` / `.startBtn` positions in `page.html`. Footer link replays it.
 
